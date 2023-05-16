@@ -35,7 +35,7 @@
             <h1 class="text-center bg-yellow-400 hover:bg-yellow-600 text-4xl">Welcome To Blogs</h1>
       </div>
       <card 
-      image="~/assets/img/rivo.jpeg"
+      image="/img/rivo.jpeg"
       deskripsi="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est expedita illum voluptatum esse ipsa modi veritatis, nam molestias omnis quis nemo blanditiis suscipit illo ipsum, dolorum quidem? Commodi, voluptate porro! Voluptates iusto doloribus ut molestias. Quos, corrupti aliquid quas obcaecati dolore eveniet nobis repellat ea quisquam quae repellendus consequuntur libero."
       nama="Rivo Yajnatantra Izzulhaq"
       job="Personal Blog"
@@ -44,3 +44,12 @@
       </card>
       </div>
   </template>
+  <!-- <script>
+  export default(await import('vue')).defineComponent({
+    data(){
+      cardData:{
+        Image:"/img/rivo.jpeg"
+      }
+    }
+  })
+</script> -->
