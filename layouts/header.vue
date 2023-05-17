@@ -24,7 +24,8 @@
             <a href="#" class="py-3 px-3 bg-yellow-400 text-yellow-900 rounded hover:text-yellow-800 hover:bg-yellow-300" >SignUp</a>
           </div>
         </div>
-        </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
+  <slot />
 </template>

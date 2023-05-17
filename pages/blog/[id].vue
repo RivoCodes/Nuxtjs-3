@@ -1,6 +1,4 @@
 <template>
-    <NuxtLayout :name="header"></NuxtLayout>
-    <header />
     <single
     image="/img/rivo.jpeg"
     about="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est expedita illum voluptatum esse ipsa modi veritatis, nam molestias omnis quis nemo blanditiis suscipit illo ipsum, dolorum quidem? Commodi, voluptate porro! Voluptates iusto doloribus ut molestias. Quos, corrupti aliquid quas obcaecati dolore eveniet nobis repellat ea quisquam quae repellendus consequuntur libero."
@@ -23,11 +21,10 @@
     </div>
 
 </template>
-<script>
-export default{
-    layout: "header"
-}
-</script>
+
 <script setup>
 const {id} = useRoute().params
+definePageMeta({
+    layout:'header'
+})
 </script>

@@ -4,11 +4,6 @@
         href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
         rel="stylesheet"
       />
-      <NuxtLayout :name="header"></NuxtLayout>
-      <header />
-      <div>
-            <h1 class="text-center bg-yellow-400 hover:bg-yellow-600 text-4xl">Welcome To Cooking Blogs</h1>
-      </div>
       <card 
       title="How to Make A Delicious Chess Burger"
       image="/img/rivo.jpeg"
@@ -23,9 +18,9 @@
 
 
 <script setup>
-  const header = 'header';
-  // const content = 'content';
-  const footer = 'footer';
+definePageMeta({
+  layout:'header'
+})
 </script>
 
   <!-- <script>
