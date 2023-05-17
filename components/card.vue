@@ -8,6 +8,9 @@
       <div class="grid gap-4 grid-cols-2">
         <div class="border rounded-lg shadow-lg p-4 float- m-10">
             <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" :src="image" alt=""/>
+            <div class="pt-2 md:p-4 text-center md:text-left space-y-4">
+              <p class="font-medium text-3 text-center">{{ title }}</p>
+            </div>
             <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
                 <p class="font-medium text-3 my-4 ">
                     {{deskripsi}}
@@ -20,7 +23,7 @@
             <div class="text-slate-700 dark:text-slate-500">
                 {{job}}
             </div>
-            <NuxtLink class="text-blue-400 hover:text-blue-700" to="#">{{blog}}</NuxtLink>
+            <NuxtLink class="text-blue-400 hover:text-blue-700" to="blog/1">{{blog}}</NuxtLink>
         </figcaption>
         </div>
         <div class="border rounded-lg shadow-lg p-4 float- m-10">
@@ -38,6 +41,9 @@
 
 <script setup>
 const props = defineProps({
+  title : {
+    type : String
+  },
     image : {
       type: String,
       required: true,
@@ -52,7 +58,5 @@ const props = defineProps({
     },
     deskripsi : {
       type: String
-    }
-
-});
+    }}); 
 </script>

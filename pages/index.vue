@@ -4,52 +4,36 @@
         href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
         rel="stylesheet"
       />
-  
-      <nav class="bg-gray-100">
-        <div class="px-8 mx-auto border">
-          <div class="flex justify-between">
-            <div class="flex space-x-4">
-              <div>
-                <a href="#" class="flex item-center py-2 px-2 text-gray-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-1 text-blue-500">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                  </svg>
-                  <span class="font-bold">
-                    HOME PAGES
-                  </span>
-                </a>
-              </div>
-              <div class="flex item-center space-x-3 py-2 px-3 text-gray-500">
-                <NuxtLink to="/">About us</NuxtLink>
-                <NuxtLink to="/">Features</NuxtLink>
-              </div>
-            </div>
-          <div class="flex item-center space-x-1">
-            <NuxtLink class="py-3 px-3 bg-green-400 text-green-900 rounded hover:bg-green-300 hover:text-green-800" to="/login">Login</NuxtLink>
-            <a href="#" class="py-3 px-3 bg-yellow-400 text-yellow-900 rounded hover:text-yellow-800 hover:bg-yellow-300" >SignUp</a>
-          </div>
-        </div>
-        </div>
-      </nav>
+      <NuxtLayout :name="header"></NuxtLayout>
+      <header />
       <div>
-            <h1 class="text-center bg-yellow-400 hover:bg-yellow-600 text-4xl">Welcome To Blogs</h1>
+            <h1 class="text-center bg-yellow-400 hover:bg-yellow-600 text-4xl">Welcome To Cooking Blogs</h1>
       </div>
       <card 
+      title="How to Make A Delicious Chess Burger"
       image="/img/rivo.jpeg"
       deskripsi="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est expedita illum voluptatum esse ipsa modi veritatis, nam molestias omnis quis nemo blanditiis suscipit illo ipsum, dolorum quidem? Commodi, voluptate porro! Voluptates iusto doloribus ut molestias. Quos, corrupti aliquid quas obcaecati dolore eveniet nobis repellat ea quisquam quae repellendus consequuntur libero."
       nama="Rivo Yajnatantra Izzulhaq"
-      job="Personal Blog"
+      job="Chef, Indonesia"
       blog="Read more ..."
       >
       </card>
       </div>
   </template>
+
+
+<script setup>
+  const header = 'header';
+  // const content = 'content';
+  const footer = 'footer';
+</script>
+
   <!-- <script>
   export default(await import('vue')).defineComponent({
-    data(){
-      cardData:{
-        Image:"/img/rivo.jpeg"
-      }
-    }
+    
+      "routes": [{
+        "path" : "/blog/:id",
+        "component" : "pages/blog/[id].vue"
+      }]
   })
 </script> -->
